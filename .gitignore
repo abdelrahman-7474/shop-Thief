@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual env
+env/
+venv/
+.venv/
+
+# Django
+*.log
+db.sqlite3
+media/
+staticfiles/
+
+# Environment files
+.env
+*.env
+
+# Model weights
+*.pt
+*.pth
+*.h5
+
+# IDE
+.vscode/
+.idea/

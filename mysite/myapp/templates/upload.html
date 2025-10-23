@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Theft Detection</title>
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+  <div class="container">
+    <h1>Theft Detection from Video</h1>
+    <form method="POST" enctype="multipart/form-data">
+      {% csrf_token %}
+      <input type="file" name="video" accept="video/*" required>
+      <button type="submit">Upload</button>
+    </form>
+
+    {% if result %}
+      <div class="result">
+        <h2>{{ result }}</h2>
+      </div>
+    {% endif %}
+  </div>
+</body>
+</html>
+
